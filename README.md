@@ -1,5 +1,6 @@
-<code>
+
 // 选中的数据
+<code>
 selectBtn.setOnAction(event -> {
     List<TableViewDemo> tableViewToSelectData = tableViewUi.getTableViewToSelectData();
     if (tableViewToSelectData.size() > 0) {
@@ -21,6 +22,7 @@ selectBtn.setOnAction(event -> {
 <img width="872" height="517" alt="image" src="https://github.com/user-attachments/assets/62a4af89-de43-4b27-8d3e-4e955653b3af" />
 
 // 打开目录
+<code>
 openDirBtn.setOnAction(event -> {
     File file = new File("C:\\Users\\Demon\\Desktop");
     String fileName = "test";
@@ -34,9 +36,11 @@ openDirBtn.setOnAction(event -> {
         e.printStackTrace();
     }
 });
+</code>
 <img width="872" height="517" alt="image" src="https://github.com/user-attachments/assets/ae764699-c7bc-4af2-a77c-5ca97abe20f7" />
 
 // 打开文件
+<code>
 openFileBtn.setOnAction(event -> {
     File file = new File("C:\\Users\\Demon\\Desktop\\将近酒.txt");
     Optional<ButtonType> optionalButtonType = SystemAlert.getOpenFile(this.window, file.getName(), file.getAbsolutePath());
@@ -52,8 +56,10 @@ openFileBtn.setOnAction(event -> {
         }
     }
 });
+</code>
 
 // 导出数据
+<code>
 exportBtn.setOnAction(new EventHandler<ActionEvent>() {
     @Override
     public void handle(ActionEvent event) {
@@ -72,5 +78,6 @@ exportBtn.setOnAction(new EventHandler<ActionEvent>() {
         }
     }
 });
+</code>
 <img width="872" height="517" alt="image" src="https://github.com/user-attachments/assets/d79c01a4-dfcd-4612-8097-cdce4af970e5" />
 
