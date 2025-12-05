@@ -1,0 +1,30 @@
+/* https://www.cnblogs.com/maokun/p/6710834.html */
+.table-view {
+    -fx-font-size: 16px;
+    -fx-border-color: #C8C8C8;
+    -fx-background-insets:0,0 0 0 0;
+    -fx-accent: #C8C8C8;
+    -fx-focus-color: #C8C8C8;
+}
+
+.table-view .column-header .label{
+    -fx-alignment: CENTER-LEFT;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:#D3D3D3;
+}
+
+/*数据表格原始样式重写*/
+.table-cell{ /*table行中列*/
+    -fx-text-fill:#323232;
+    -fx-border-color:#FFF;
+    -fx-border-width:0 0 0 0;
+}
+
+.table-row-cell{ /*table行*/
+    -fx-padding:0;
+    -fx-border-color:#FFF;
+    -fx-border-width:0 0 0 0;
+    -fx-background-insets: 0,0 0 1 0;
+}
