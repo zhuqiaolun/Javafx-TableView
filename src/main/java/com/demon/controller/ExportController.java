@@ -99,7 +99,7 @@ public class ExportController implements Initializable {
                     dialog.close();
                     exportStatus.setText("导出成功");
                     // 导出完成后的操作··
-                    //MainController.getInstance().loadData();
+                    MainController.getInstance().loadData();
                     // 以上为自己业务的逻辑
                     SystemAlert.getCloseDialogPane(downloadYes);
                 } else {

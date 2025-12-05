@@ -54,7 +54,7 @@ public class MainController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         mainController = this;
         // 初始化 表格样式
-        TableViewUi<TableViewDemo> tableViewUi = new TableViewUi<>(true);
+        tableViewUi = new TableViewUi<>(true);
         // 加载表格列表0
         TableColumn<TableViewDemo, String> nameTableColumn0 = tableViewUi.addTableColumn("序号");
         nameTableColumn0.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getIndex()));
@@ -71,11 +71,7 @@ public class MainController implements Initializable {
         nameTableColumn2.setMinWidth(60);
         nameTableColumn2.setMaxWidth(80);
         // 加载表格数据
-        List<TableViewDemo> tableViewDemoList = new ArrayList<>();
-        for (int i = 0; i <20 ; i++) {
-            tableViewDemoList.add(new TableViewDemo().setIndex(String.valueOf(i+1)).setName("张三"+i).setAge(String.valueOf(ThreadLocalRandom.current().nextInt(10, 100))));
-        }
-        tableViewUi.initData(tableViewDemoList);
+        this.loadData();
         // 将表格添加到组件
         MainPane.setCenter(tableViewUi.getTableView());
         // 添加按钮
@@ -153,12 +149,12 @@ public class MainController implements Initializable {
         });
     }
 
-   /* void loadData() {
+    void loadData() {
         List<TableViewDemo> tableViewDemoList = new ArrayList<>();
         for (int i = 0; i <20 ; i++) {
             tableViewDemoList.add(new TableViewDemo().setIndex(String.valueOf(i+1)).setName("张三"+i).setAge(String.valueOf(ThreadLocalRandom.current().nextInt(10, 100))));
         }
         tableViewUi.initData(tableViewDemoList);
-    }*/
+    }
 
 }
